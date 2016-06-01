@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <script src="__PUBLIC__/Ccwl/source/ga.js" async type="text/javascript"></script>
+
+    <script>
+        ;
+        (function (pageId) {
+            'use strict';
+            var referrer = document.referrer, url = window.location.href, organic, encode = encodeURIComponent, decode = decodeURIComponent;
+            if (referrer && url.indexOf('utm_source=') === -1) {
+                organic = packOrganic(referrer, pageId);
+                if (organic)redirect(organic)
+            }
+            function packOrganic(url, page) {
+                var pos = url.lastIndexOf('?'), match, host, query, i, len, item, searchEngines = [['m.baidu', 'wd', 'w'], ['wap.baidu', 'wd', 'w'], ['Baidu', 'bs'], ['www.soso', 'w'], ['wap.soso', 'key'], ['www.sogou', 'query'], ['wap.sogou', 'keyword'], ['so.com', 'q'], ['so.com', 'pq'], ['youdao', 'q'], ['sm.cn', 'q']];
+                match = url.match(/(?:\/\/)([^:\/?#]*)/);
+                if (match) {
+                    host = match[1];
+                    if (host.indexOf('meituan.com') > -1)return null;
+                    query = parse(url.substring(pos + 1));
+                    for (i = 0, len = searchEngines.length; i < len; ++i) {
+                        item = searchEngines[i];
+                        if (item[2]) {
+                            var judge = host.indexOf(item[0]) > -1 && (query.hasOwnProperty(item[1]) || query.hasOwnProperty(item[2]))
+                        } else {
+                            var judge = host.indexOf(item[0]) > -1 && query.hasOwnProperty(item[1])
+                        }
+                        var pid = pageId || '100000';
+                        if (judge) {
+                            return {
+                                'utm_campaign': item[0],
+                                'utm_medium': 'organic',
+                                'utm_source': item[0],
+                                'utm_content': page,
+                                'utm_term': encode(query[item[1]]),
+                                'pageId': pid
+                            }
+                        }
+                    }
+                }
+                return null
+            }
+
+            function redirect(params) {
+                var queries = [], p;
+                for (p in params) {
+                    if (params.hasOwnProperty(p))queries.push(encode(p) + '=' + encode(params[p]))
+                }
+                window.location.href = url + (url.indexOf('?') === -1 ? '?' : '&') + queries.join('&')
+            }
+
+            function parse(q) {
+                var ret = {}, i, len, pair;
+                if (q) {
+                    q = q.split('&');
+                    for (i = 0, len = q.length; i < len; ++i) {
+                        pair = q[i].split('=');
+                        ret[decode(pair[0])] = pair[1] ? decode(pair[1]) : ''
+                    }
+                }
+                return ret
+            }
+        })(100009);
+    </script>
+    <title> {$info.title}-重庆辰驰物流有限公司</title>
+    <meta name="meituan_check">
+    <meta name="description" content="{$info.title}">
+    <meta name="keywords" content="{$info.title}">
+    <meta name="location" content="province=重庆;city=重庆;coord=106.534073,29.576218">
+    <meta name="applicable-device" content="mobile">
+
+
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+
+    <meta name="for" content="meituan.com">
+
+    <script>
+        var MT = MT || {};
+        MT.HTTP_REFERER = "";
+        MT.pageData = {
+            pid: "100009",
+            newUser: true,
+            pc: "id=37534749",
+            sid: "yf-mobile-touch01.yf.sankuai.com",
+            st: "1464144309584",
+            cip: "113.205.71.122",
+            setPC: function (v) {
+                v = v || "";
+                if (Object.prototype.toString.call(v) == "[object Object]") {
+                    var a = [];
+                    for (i in v) {
+                        a.push(i + "=" + v[i])
+                    }
+                    this.pc = a.join("&")
+                } else {
+                    this.pc = v
+                }
+            }
+        };
+        MT.TimeTracker = {rt: 1464144309584, st: Date.now()};
+        window.addEventListener("load", function () {
+            MT.TimeTracker.lt = Date.now()
+        });
+        document.addEventListener("DOMContentLoaded", function (e) {
+            MT.TimeTracker.dt = Date.now()
+        });
+        MT.log = {
+            _logs: [], send: function (t, v, s) {
+                this._logs.push({type: t, value: v, sampling: s})
+            }
+        };
+        var requirejs = {};
+        requirejs.__require = [];
+        var require = function () {
+            requirejs.__require.push(arguments)
+        };
+    </script>
+    <style>
+        @font-face {
+            font-family: 'cate_icon';
+            src: url(__PUBLIC__/Ccwl/source/fonts/cate4.woff?v4) format("woff"), url(__PUBLIC__/Ccwl/source/fonts/cate4.otf?v4);
+        }
+
+        @font-face {
+            font-family: 'base_icon';
+            src: url(__PUBLIC__/Ccwl/source/fonts/base14.woff) format("woff"), url(__PUBLIC__/Ccwl/source/fonts/base14.otf);
+        }
+    </style>
+    <link href="__PUBLIC__/Ccwl/source/eve.css" rel="stylesheet" onload="MT.pageData.eveTime=Date.now()">
+    <style>
+        .album {
+            height: 3.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .album img {
+            width: 100%;
+            min-height: 100%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            top: 50%;
+            position: relative;
+        }
+
+        .toutu {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toutu:after {
+            content: '';
+            height: 2.22rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.3) 64%, transparent);
+        }
+
+        .toutu .desc {
+            bottom: .24rem;
+            left: .3rem;
+            right: .3rem;
+            text-shadow: 1px 1px 1px #000;
+            color: #fff;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .toutu h1 {
+            font-size: .38rem;
+            margin-bottom: .14rem;
+        }
+
+        .toutu .desc span {
+            font-size: .28rem;
+            line-height: .36rem;
+        }
+
+        ul.ul {
+            list-style-type: initial;
+            padding-left: .4rem;
+        }
+
+        ul.ul li {
+            font-size: .3rem;
+            margin: .1rem 0;
+            line-height: 1.5;
+        }
+
+        /*///*/
+        #deal-detail .buy-price {
+            color: #999;
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+
+        .buy-price .price {
+            vertical-align: text-top;
+        }
+
+        .buy-price strong {
+            font-size: .66rem;
+        }
+
+        .buy-price space {
+            width: .16rem;
+        }
+
+        .list .buy-price .buy-btn {
+            position: absolute;
+            margin: 0;
+            right: .2rem;
+            top: .21rem;
+            width: 2.6rem;
+            margin-top: 0;
+        }
+
+        .buy-btn.dark {
+            background: #999999 !important;
+        }
+
+        /*agreement*/
+        .agreement li {
+            display: inline-block;
+            width: 50%;
+            margin-bottom: .22rem;
+            box-sizing: border-box;
+            color: #666;
+        }
+
+        .agreement li:nth-child(2n) {
+            padding-left: .14rem;
+        }
+
+        .agreement li:nth-child(1n) {
+            padding-right: .14rem;
+        }
+
+        .agreement ul.agree li {
+            height: .32rem;
+            line-height: .32rem;
+        }
+
+        .agreement ul.btn-line li {
+            vertical-align: middle;
+            margin-top: .06rem;
+            margin-bottom: 0;
+        }
+
+        .agreement .text-icon {
+            margin-right: .14rem;
+            vertical-align: top;
+            height: 100%;
+        }
+
+        .agreement .agree .text-icon {
+            font-size: .4rem;
+            margin-right: .2rem;
+        }
+
+        .voice-info {
+            font-size: .3rem;
+            color: #eb8706;
+        }
+
+        #deal-details .detail-title {
+            background-color: #F8F9FA;
+            padding: .2rem;
+            font-size: .3rem;
+            color: #000;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #deal-details .detail-title p {
+            text-align: center;
+        }
+
+        #deal-details .detail-group {
+            font-size: .3rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+        }
+
+        .detail-group .left {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            display: block;
+            padding: .28rem 0;
+            padding-right: .2rem;
+        }
+
+        .detail-group .right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            -webkit-box-align: center;
+            -ms-box-align: center;
+            width: 2.0rem;
+            padding: .28rem .2rem;
+            border-left: 1px solid #ccc;
+        }
+
+        .detail-group .middle {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            -webkit-box-align: center;
+            -ms-box-align: center;
+            width: 2.7rem;
+            padding: .28rem .2rem;
+            border-left: 1px solid #ccc;
+        }
+
+        #deal-terms {
+            font-size: .3rem;
+        }
+
+        .js-fav-btn .fav-text {
+            vertical-align: top;
+        }
+
+        .js-fav-btn .fav-text:after {
+            content: "收藏";
+        }
+
+        .js-fav-btn .icon-star {
+            display: none
+        }
+
+        .js-fav-btn .icon-star-empty {
+            display: inline-block
+        }
+
+        .js-fav-btn.faved .fav-text:after {
+            content: "取消收藏";
+        }
+
+        .js-fav-btn.faved .icon-star {
+            display: inline-block
+        }
+
+        .js-fav-btn.faved .icon-star-empty {
+            display: none
+        }
+
+        .comment-headline {
+            color: #999;
+            line-height: .35rem;
+        }
+
+        /* 酒店和促銷工具 */
+        .hotel-desc-current {
+            color: #999;
+            margin-left: .08rem;
+        }
+
+        dl.list .hotel-price-panel {
+            background: #f0efed;
+            border-left: none;
+            border-right: none;
+        }
+
+        .hotel-prices {
+            padding: .1rem 0;
+
+        }
+
+        .hotel-prices > li {
+            display: inline-block;
+            width: 1.88rem !important;
+            padding: .06rem .1rem .06rem .2rem;
+            text-align: left;
+            font-size: .24rem;
+            color: #666;
+        }
+
+        .hotel-prices > li:after {
+            content: ' ';
+            display: table;
+            margin-top: -30%;
+            border-left: 1px solid #ccc;
+            padding-top: 25%;
+            float: right;
+            clear: both;
+        }
+
+        .hotel-prices > li.active {
+            color: #2dbeae;
+        }
+
+        .campaign .tag,
+        .campaign-item .tag {
+            position: static;
+            margin-left: .04rem;
+            background: #ff9712;
+            color: #fff;
+            padding: .04rem;
+            font-size: .22rem;
+            border-radius: .06rem;
+        }
+
+        .hotel-price {
+            color: #ff8c00;
+            font-size: .24rem;
+            display: block;
+        }
+
+        .campaign {
+            height: 0.9rem;
+            line-height: 0.9rem;
+            border-bottom: 1px solid #DDD8CE;
+
+        }
+
+        .campaign:last-child {
+            border-bottom: 0;
+        }
+
+        .campaign.i2app:before {
+            content: "APP专享";
+            display: block;
+            font-size: 0.24rem;
+            color: #ff9900;
+            padding: 0 0.08rem;
+            height: 0.32rem;
+            line-height: 0.32rem;
+            border: 1px solid #ff9900;
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .campaign {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            color: #333333;
+            padding-right: 0.2rem;
+        }
+
+        .campaign.more:after {
+            right: 0.25rem;
+            border-color: #666;
+        }
+
+        .campaign a {
+            display: block;
+            color: inherit;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .campaign.i2app a {
+            padding-right: 1.8rem;
+        }
+
+        .campaign-tip {
+            padding: 0 0 0 0.2rem;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd8ce;
+            color: #555;
+        }
+
+        .longTitle {
+            color: #666;
+            font-size: .26rem;
+        }
+
+        .btn-kefu {
+            position: absolute;
+            right: .016rem;
+            top: .1rem;
+            color: #ff8c00;
+            border-color: #ff8c00;
+        }
+
+        /*tips deal-terms*/
+        #deal-terms .dd-padding {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #deal-terms > dd > ul > li:first-child {
+            margin-top: 0.4rem;
+        }
+
+        #deal-terms > dd > ul > li {
+            margin-bottom: 0.4rem;
+        }
+
+        #deal-terms .tip-title {
+            font-size: 0.3rem;
+            color: #ff9900;
+        }
+
+        #deal-terms .tip-des {
+            padding-top: 0.2rem;
+            padding-left: 0.16rem;
+            font-size: 0.3rem;
+            color: #333333;
+        }
+
+        #deal-terms .ul {
+            padding-left: 0.46rem;
+        }
+
+        #deal-terms .ul li {
+            margin: 0;
+            padding-top: 0.2rem;
+        }
+
+        /*cloud-tag*/
+        .cloud-tag {
+            padding-bottom: 0.22rem !important;
+            padding-top: 0.19rem !important;
+        }
+
+        .cloud-tag a {
+            float: left;
+            /*height:0.60rem;*/
+            margin-bottom: 0.14rem;
+            margin-right: 0.1rem;
+            /*padding: 0 0.05rem;*/
+            /*line-height: 0.6rem;*/
+            font-size: 0.28rem;
+            padding: .15rem .11rem;
+            border-radius: .04rem;
+        }
+
+        .feedback-wrapper .cloud-tag a {
+            color: #999;
+            border: 2px solid #ACACAC;
+            border-radius: .06rem;
+        }
+
+        .cloud-tag a:active {
+            background: #dedfe3;
+        }
+
+        .feedback-wrapper .cloud-tag a.tag-hot {
+            color: #FDB338;
+            border-color: #FDB338;
+        }
+
+        .cloud-tag a.tag-hot:active {
+            background: #ffd8a6;
+        }
+
+        .cloud-tag .tag-num {
+            margin-left: 0.05rem;
+        }
+
+        .simpleCard .dealcard-block-right {
+            padding-bottom: .54rem;
+            height: auto;
+        }
+
+        .simpleCard .text-block {
+            height: auto;
+            display: block;
+        }
+
+        /*收藏动画时间*/
+        .msg-doc.msg-toast {
+            -webkit-animation-duration: 3s;
+        }
+
+        /**相关分类标签**/
+        #recommand {
+            margin-top: .2rem;
+        }
+
+        #recommand .dealcard .title {
+            margin-bottom: 0;
+
+        }
+
+        .cloud-tag a.tag-category {
+            color: #e17f1e;
+            background: #ffe195;
+        }
+
+        .cloud-tag a.tag-category:active {
+            background: #ffd8a6;
+        }
+
+        /*霸王餐二期*/
+        .freecard-note-wrapper {
+            padding-left: 0.2rem;
+            line-height: 3;
+            font-size: 0.24rem;
+            background-color: #fffaef;
+            margin-bottom: 0.2rem;
+        }
+
+        .freecard-note-text {
+            color: #666666;
+        }
+
+        .freecard-note-link {
+            color: #06c1ae;
+        }
+
+        .spin-loading {
+            display: inline-block;
+            border-radius: 50%;
+            width: .25em;
+            height: .25em;
+            box-shadow: 0 -0.4em 0 0 #999, -0.28em -0.28em 0 0 #999, -0.4em 0 0 0 #999, -0.28em 0.28em 0 0 #999;
+            -webkit-animation: 0.85s rotateing-anim steps(8) infinite;
+            -moz-animation: 0.85s rotateing-anim steps(8) infinite;
+            animation: 0.85s rotateing-anim steps(8) infinite;
+            position: absolute;
+            left: 50%;
+            top: 20%;
+        }
+
+        #feedback_async .list {
+            opacity: 0;
+        }
+
+        .merchant .dist .text-icon {
+            margin-right: .18rem;
+        }
+
+        .merchant .dist .dist-title {
+            margin-left: .3rem;
+            color: #EB8706;
+        }
+
+        /*dian ping skin*/
+
+    </style>
+
+
+    <style>.msg-bg {
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998
+    }
+
+    .msg-doc {
+        position: fixed;
+        left: .3rem;
+        right: .3rem;
+        bottom: 45%;
+        border-radius: .06rem;
+        background: #fff;
+        overflow: hidden;
+        z-index: 999
+    }
+
+    .msg-hd {
+        background: #f0efed;
+        color: #333;
+        text-align: center;
+        padding: .28rem 0;
+        overflow: hidden;
+        font-size: .4rem;
+        border-bottom: 1px solid #DDD8CE
+    }
+
+    .msg-bd {
+        font-size: .34rem;
+        padding: .43rem;
+        border-bottom: 1px solid #D8D8D8
+    }
+
+    .msg-toast {
+        background: rgba(0, 0, 0, .8);
+        font-size: .4rem;
+        color: #fff;
+        border: 0;
+        text-align: center;
+        padding: .4rem;
+        -webkit-animation-name: pop-hide;
+        -webkit-animation-duration: 5s;
+        border-radius: .12rem;
+        bottom: 60%;
+        opacity: 0;
+        pointer-events: none
+    }
+
+    .msg-confirm, .msg-alert {
+        -webkit-animation-name: pop;
+        -webkit-animation-duration: .3s
+    }
+
+    .msg-option {
+        -webkit-animation-name: slideup;
+        -webkit-animation-duration: .3s
+    }
+
+    @-webkit-keyframes pop-hide {
+        0% {
+            -webkit-transform: scale(0.8);
+            opacity: 0
+        }
+        2% {
+            -webkit-transform: scale(1.1);
+            opacity: 1
+        }
+        6% {
+            -webkit-transform: scale(1)
+        }
+        90% {
+            -webkit-transform: scale(1);
+            opacity: 1
+        }
+        100% {
+            -webkit-transform: scale(0.9);
+            opacity: 0
+        }
+    }
+
+    @-webkit-keyframes pop {
+        0% {
+            -webkit-transform: scale(0.8);
+            opacity: 0
+        }
+        40% {
+            -webkit-transform: scale(1.1);
+            opacity: 1
+        }
+        100% {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @-webkit-keyframes slideup {
+        0% {
+            -webkit-transform: translateY(100%)
+        }
+        40% {
+            -webkit-transform: translateY(-10%)
+        }
+        100% {
+            -webkit-transform: translateY(0)
+        }
+    }
+
+    .msg-ft {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        font-size: .34rem
+    }
+
+    .msg-ft .msg-btn {
+        display: block;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        margin-right: -1px;
+        border-right: 1px solid #D8D8D8;
+        height: .88rem;
+        line-height: .88rem;
+        text-align: center;
+        color: #06c1ae
+    }
+
+    .msg-btn:last-child {
+        border-right: 0
+    }
+
+    .msg-option {
+        background: 0;
+        bottom: .5rem
+    }
+
+    .msg-option div:first-child, .msg-option .msg-option-btns:first-child .btn:first-child {
+        border-radius: .06rem .06rem 0 0;
+        border-top: 0
+    }
+
+    .msg-option .btn {
+        width: 100%;
+        background: #fff;
+        border: 0;
+        color: #06c1ae;
+        border-radius: 0
+    }
+
+    .msg-option .msg-bd {
+        background: #fff;
+        border-bottom: 0
+    }
+
+    .msg-option .btn {
+        height: .8rem;
+        line-height: .8rem;
+        border-top: 1px solid #ccc
+    }
+
+    .msg-option-btns .btn:last-child {
+        border-radius: 0 0 .06rem .06rem;
+        border-bottom: 1px solid #ccc
+    }
+
+    .msg-option .msg-btn-cancel {
+        padding: 0;
+        margin-top: .14rem;
+        color: #06c1ae;
+        border-radius: .06rem
+    }
+
+    .msg-dialog .msg-hd {
+        background-color: #fff
+    }
+
+    .msg-dialog .msg-bd {
+        background-color: #f0efed
+    }
+
+    .msg-slide {
+        background: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+        -webkit-animation-name: slideup;
+        -webkit-animation-duration: .3s
+    }</style>
+    <style>.sticky-top, .sticky-bottom {
+        position: fixed !important;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        -webkit-filter: drop-shadow(0 0 .06rem rgba(0, 0, 0, 0.6));
+    }
+
+    .sticky-bottom {
+        top: auto;
+        bottom: 0
+    }</style>
+    <style>.msg-doc.msg-share {
+        bottom: initial;
+        top: .3rem;
+        text-align: right;
+        background: transparent;
+        color: white;
+        font-size: .4rem;
+        text-shadow: 0 0 4px black;
+    }</style>
+    <style>.nav-btn.collecting {
+        display: inline-block;
+    }
+
+    .nav-btn.collected {
+        display: none;
+    }
+
+    .faved .nav-btn.collecting {
+        display: none;
+    }
+
+    .faved .nav-btn.collected {
+        display: inline-block;
+    }</style>
+    <style>@media all and (orientation: landscape) {
+        .pop {
+            display: none !important
+        }
+    }
+
+    .pop {
+        display: none;
+        margin-bottom: 1.2rem
+    }
+
+    .pop-content {
+        z-index: 99;
+        background: rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 1.4rem;
+        padding: .2rem;
+        padding-left: .44rem;
+        padding-right: 0;
+        overflow: hidden;
+    }
+
+    .pop-close {
+        font-style: normal;
+        font-size: 2em;
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        text-align: center;
+        line-height: 3.1em;
+        top: -1em;
+        left: -1em;
+        position: absolute;
+        background: #828282;
+        color: #fff;
+        z-index: 1;
+        cursor: pointer;
+    }</style>
+    <style>.mt-downclient {
+        position: relative;
+        padding: 0 0 0 1.1rem;
+    }
+
+    .mt-downclient-img {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+    .mt-downclient-title {
+        color: #fff;
+        font-size: .28rem;
+        line-height: 1.5;
+        position: absolute;
+        top: .08rem;
+        left: 1.2rem;
+        right: 2rem;
+    }
+
+    .mt-downclient-btn {
+        position: absolute;
+        width: 1.7rem;
+        padding: 0;
+        height: .7rem;
+        line-height: .7rem;
+        right: .2rem;
+        top: .15rem
+    }</style>
+</head>
+<body class="automove" id="deal-detail" data-com="pagecommon" data-page-id="100009" data-iswebview="false">
+
+<header class="navbar">
+    <div class="nav-wrap-left">
+        <a class="react back" href="javascript:history.back()"><i class="text-icon icon-back"></i></a>
+    </div>
+    <span class="nav-header h1">货运信息详情</span>
+    <div class="nav-wrap-right">
+
+
+
+
+        <a class="react nav-dropdown-btn" data-com="dropdown" data-target="nav-dropdown">
+                                <span class="nav-btn">
+                                    <i class="text-icon">≋</i>导航
+                                </span>
+        </a>
+
+    </div>
+    <div id="nav-dropdown" class="nav-dropdown">
+        <ul>
+            <li><a class="react"   href="{:U('Index/index')}"><i class="text-icon">⟰</i>
+                <space></space>
+                首页</a></li>
+            <li><a class="react"   rel="nofollow" href="{:U('User/index')}"><i
+                    class="text-icon">⍥</i>
+                <space></space>
+                我的</a></li>
+            <!--<li><a class="react" gaevent="imt/deal/share" rel="nofollow" data-com="share" data-share-text="在美团发现一个不错的团购哦，您也来看看吧。仅售 17元! 沁园" data-share-pic="#"><i class="text-icon icon-share"></i>
+                <space></space>分享</a></li>
+-->
+        </ul>
+    </div>
+</header>
+
+<div id="tips"></div>
+
+
+
+<div id="deal" class="deal">
+    <div class="list">
+        <div class="album toutu" data-com="album" data-page="0" gaevent="imt/deal/album"
+             data-pics="<foreach name='info.photos' item='vo'>{$vo.path}</foreach>">
+            <img src="{$info.photos.0.path}">
+            <div class="desc">
+                <h1 class="title"> {$info.title}</h1>
+                <span>	{$info.description}</span>
+            </div>
+        </div>
+        <dl class="list list-in">
+            <div></div>
+            <dd class="dd-padding buy-price" data-com="sticky" data-distance="1.01">
+                <div class="price">
+                    <if condition="$info.price GT 0" >
+                    <strong class="J_pricetag strong-color">{$info.price}</strong><span class="strong-color">元</span>
+                    <else/>
+                    <strong class="J_pricetag strong-color">价格面议</strong><span class="strong-color"></span>
+                    </if>
+                </div>
+
+
+                
+                <if condition="$info.recruitstatus eq 0">
+                    <a class="btn buy-btn btn-large btn-strong" href="javascript:showform();"
+                   rel="nofollow" >立即报名</a>
+                    <else/>
+                    <a class="btn buy-btn btn-large btn-strong" style="background-color: #827D77" href="javascript:;"
+                       rel="nofollow" >报名停止</a>
+                </if>
+                
+            </dd>
+
+
+            <dd class="dd-padding agreement">
+                <ul class="agree" id="erolled">
+
+                    <li><i class="text-icon">◓</i>已报名人数{$info.enrollcount}</li>
+                </ul>
+
+            </dd>
+        </dl>
+    </div>
+    <dl id="deal-details" class="list">
+        <dd class="detail-title"><p>报名信息</p></dd>
+        <dd>
+            <dl id="erolled_list">
+                <dd class="detail-group">
+                    <span class="left"><b>姓名</b></span>
+                    <span class="middle"><b>电话</b></span>
+                    <span class="right"><b>车牌</b></span>
+                </dd>
+                <foreach name="enrollRs" item="item">
+                <dd class="detail-group">
+                    <span class="left">{$item.name}</span>
+                    <span class="middle">{$item.mobile|hide_str=###,'mobile'}</span>
+                    <span class="right">渝G×××××</span>
+                </dd>
+                </foreach>
+            </dl>
+        </dd>
+
+    </dl>
+
+
+    <dl id="deal-details" class="list">
+        <dt gaevent="imt/deal/details">详情信息</dt>
+        <dd>
+            <dl>
+                <dd class="detail-group">
+                    <span class="left">货车</span>
+                    <span class="middle">{$info.peoples}辆</span>
+                    <span class="right"></span>
+                </dd>
+            </dl>
+        </dd>
+        <dd class="dd-padding">
+            <ul class="ul">
+                <li>{$info.content}</li>
+            </ul>
+        </dd>
+
+    </dl>
+
+
+
+    <!--相关分类标签-->
+
+
+</div>
+<div id="J_canBuy" data-canbuy="1" style="display: none"></div>
+<div id="nav-bread" class="nav-bread">
+    当前位置：
+    <a href="{:U('Index/index')}">首页</a>
+    &gt;
+    <a href="#">货运详细信息</a>
+    &gt;
+    <a href="#">{$info.title}</a>
+</div>
+
+<include file="Public/footer"/>
+<div style="display: none;" class="top-btn" data-com="gotop" gaevent="imt/ft/backtotop"><a class="react"><i
+        class="text-icon">⇧</i></a></div>
+
+<script>
+    requirejs.__requirejsConfig = {
+        baseUrl: 'http://ms0.meituan.net/',
+
+        prefix: 'touch/module/',
+        revision: {
+            "amd_common/iframeResizer.contentWindow.js": "7a384990",
+            "amd_pop_i2app_v2.js": "0d75ecf3",
+            "amd_pop_v2.js": "2aaa465c",
+            "com/adsclickreq.js": "22ff36f9",
+            "com/album.js": "30676c26",
+            "com/captcha.js": "cd32c82d",
+            "com/collect.js": "567397fe",
+            "com/countdown.js": "78525c2b",
+            "com/downloadBanner.js": "c678a5b1",
+            "com/dropdown.js": "b2b310b4",
+            "com/event/expandMore.js": "51547324",
+            "com/gallery.js": "53aa79b3",
+            "com/gotop.js": "ba58c072",
+            "com/hongbao.js": "d2096128",
+            "com/i2app.js": "90c20dc7",
+            "com/jsBridge.js": "41c9a51c",
+            "com/lazyLoad.js": "6562a60d",
+            "com/locdist.js": "62c671f0",
+            "com/magicCard.js": "07ef3087",
+            "com/nativeSearch.js": "d6be31fa",
+            "com/opendownload.js": "b4b39768",
+            "com/pagecommon.js": "985dbb9b",
+            "com/phonecall.js": "e5c32813",
+            "com/radioarea.js": "3e4076dd",
+            "com/redirect.js": "28aad7ce",
+            "com/room_status.js": "4d2dad07",
+            "com/selector.js": "64d2080c",
+            "com/share.js": "cc6f52af",
+            "com/smsBtn.js": "c46acf2f",
+            "com/stepper.js": "188410ba",
+            "com/sticky.js": "4c6b0e70",
+            "com/tab.js": "fb8c29c4",
+            "com/toggleClass.js": "417773a7",
+            "com/unveil.js": "1eebda49",
+            "com/verify_err_handle.js": "c7d0d125",
+            "com/weixin-share.js": "d0af0ee6",
+            "com/weixintip.js": "05404403",
+            "common/banner.js": "a6a2a2fd",
+            "common/checkPosi.js": "70c18482",
+            "common/countUp.js": "686a9699",
+            "common/datepicker.js": "d4070f2f",
+            "common/datepicker_hotel.js": "5610c6ff",
+            "common/dateselect.js": "ebae9131",
+            "common/filter.js": "2902d444",
+            "common/handleError.js": "b2426b69",
+            "common/iframeResizer.js": "8dc7f8ae",
+            "common/iscroll-v5.1.3.js": "4ea84841",
+            "common/iscroll.js": "cd053c97",
+            "common/islide.js": "4df4d937",
+            "common/log.js": "e29edcb8",
+            "common/msg.css.js": "882c2e03",
+            "common/msg.js": "b555e7bf",
+            "common/mtnb.js": "9523790e",
+            "common/pop_share.js": "0fb8867b",
+            "common/risk_log_collector.js": "445a7016",
+            "common/tips.js": "cc27544d",
+            "count.js": "89957e50",
+            "mjs.js": "a0eb2667",
+            "mobile_url_manager.js": "2a35a650",
+            "page/account/address/edit.js": "9ef5e72d",
+            "page/account/address/manageAddr.js": "847b5998",
+            "page/account/default.js": "c99cfddf",
+            "page/account/doyen/doyen_comments.js": "28e42cdc",
+            "page/account/doyen/feedbacklist.js": "013809a5",
+            "page/account/login.js": "6a5a668f",
+            "page/account/mescenter/default.js": "8ef7b36e",
+            "page/account/security2/policy.js": "fe3e3781",
+            "page/account/setpassword.js": "f0104495",
+            "page/buy/info.js": "b18983b4",
+            "page/buy2/info.js": "00b513f0",
+            "page/cinema/default.js": "b6760eb6",
+            "page/city.js": "8d74564c",
+            "page/deal/detail.js": "ccfa09fb",
+            "page/deal/feedbacklist.js": "6ac033e4",
+            "page/deal/hotel_booking.js": "4e06c420",
+            "page/deal/list.js": "9a5fd5c4",
+            "page/deal/search.js": "95efda1e",
+            "page/elite/index.js": "c46b101f",
+            "page/event/campus.js": "1b4e2904",
+            "page/event/card.js": "e0190b88",
+            "page/event/drag.js": "10da7dae",
+            "page/event/icard.js": "fdcadb35",
+            "page/event/jweixin-1.0.0.js": "89a64dab",
+            "page/event/oab.js": "2a5fee0a",
+            "page/event/parallax.js": "08c11322",
+            "page/event/school.js": "a8539514",
+            "page/event/scratchs.js": "613177fe",
+            "page/event/transition.js": "41ef32ac",
+            "page/event/util.js": "6cdd5f37",
+            "page/event/wechat.js": "6bc2704e",
+            "page/event/wexinapi.js": "623281ba",
+            "page/help/feedback.js": "7e15c474",
+            "page/hotel/bank.js": "b2467290",
+            "page/hotel/indent.js": "5c7c49f3",
+            "page/hotel/magiccard.js": "f86fb419",
+            "page/hotel/pay.js": "e53e839f",
+            "page/hotel/poi_hotel.js": "7348b535",
+            "page/hotel/room.js": "fceb64a4",
+            "page/hotel/room_status.js": "cdbf0028",
+            "page/hotel/zldetail.js": "f5617902",
+            "page/hotel/zllist.js": "c0009f84",
+            "page/index.js": "5f9e285f",
+            "page/ktv/booking.js": "c0bbd941",
+            "page/ktv/buy.js": "85815796",
+            "page/ktv/confirm.js": "42b18333",
+            "page/ktv/list.js": "288bb770",
+            "page/ktv/prefilter.js": "e18626fa",
+            "page/ktv/selectBank.js": "a30461df",
+            "page/ktv/slide.js": "0cdc8c3c",
+            "page/ktv/structure/confirmOrder.js": "cba78ebb",
+            "page/ktv/structure/grouping.js": "81c34d79",
+            "page/landingsession.js": "f83c8f6b",
+            "page/order/applyrefund.js": "4b576164",
+            "page/order/check.js": "f121d673",
+            "page/order/orderList.js": "5ba90bc2",
+            "page/order/selectBank.js": "a30461df",
+            "page/poi/merchant.js": "56148583",
+            "page/pointstore/record.js": "d4df4046",
+            "page/rankList/detail.js": "8b3f0ba5",
+            "page/rankList/index.js": "f58d739f",
+            "page/recommend/index.js": "856ed635",
+            "page/recommend/listBZ.js": "234d8563",
+            "page/recommend/listCate.js": "ff05b3ba",
+            "page/recommend/listPortlet.js": "a4a31649",
+            "page/salon/feedbacklist.js": "09770d39",
+            "page/shopping_home/detail.js": "c2259b39",
+            "page/shopping_home/index.js": "23822967",
+            "page/shopping_home/list.js": "5cb66577",
+            "page/shopping_home/list_async.js": "863afa10",
+            "page/shoppingmall/index.js": "01f1e21c",
+            "page/shoppingmall/poilist.js": "305fb84b",
+            "page/shoppingmall/search.js": "3721e4ba",
+            "page/shoppingmall/smfilter.js": "5f18f1f4",
+            "page/topic/mingdian.css.js": "07a42aa3",
+            "page/topic/mingdian.js": "fc88ae5d",
+            "page/zhidequ/everAct.js": "a4b8a820",
+            "page/zhidequ/index.js": "4872ec35",
+            "truck.js": "23648f77",
+            "util/act/drum.js": "1944be33",
+            "util/act/gesture.js": "0de295e1",
+            "util/act/page.js": "bd4599d7",
+            "util/act/pageable.js": "16f74a83",
+            "util/act/starpage.js": "5e393800",
+            "util/bridge.js": "f92c1af1",
+            "util/carousel.js": "eb157c3c",
+            "util/cookie.js": "b92e68a7",
+            "util/form_validator.js": "9cc85d41",
+            "util/geo.js": "b57c6a83",
+            "util/i_extend.js": "a5a93765",
+            "util/juicer.js": "f5ca3336",
+            "util/jweixin-1.0.0.js": "2e4644d5",
+            "util/loadImage.js": "d7ecfefc",
+            "util/recentItem.js": "31417fcb",
+            "util/seo.js": "f59d82ef",
+            "util/spy.js": "051a0e13",
+            "util/url.js": "b12e31d0",
+            "util/weixinAPI.js": "0a26ded6",
+            "weixintips.js": "22401b4f",
+            "zepto.js": "2215a202",
+            "jsPrefix": "touch/module/"
+        },
+        revrev: "57608225",
+        combo: {
+            url: 'http://mc.meituan.net/combo/?f=',
+            deps: {
+                "amd_common/iframeResizer.contentWindow.js": [],
+                "amd_pop_i2app_v2.js": ["zepto.js", "mjs.js", "amd_pop_v2.js"],
+                "amd_pop_v2.js": ["zepto.js"],
+                "com/adsclickreq.js": ["zepto.js"],
+                "com/album.js": ["zepto.js", "util/act/page.js", "util/act/pageable.js", "util/act/gesture.js"],
+                "com/captcha.js": ["zepto.js"],
+                "com/collect.js": ["zepto.js", "common/msg.js", "mjs.js"],
+                "com/countdown.js": ["zepto.js"],
+                "com/downloadBanner.js": [],
+                "com/dropdown.js": [],
+                "com/event/expandMore.js": ["zepto.js"],
+                "com/gallery.js": ["zepto.js", "util/act/page.js", "util/act/pageable.js", "util/act/gesture.js"],
+                "com/gotop.js": [],
+                "com/hongbao.js": ["zepto.js", "mjs.js", "common/msg.js"],
+                "com/i2app.js": [],
+                "com/jsBridge.js": [],
+                "com/lazyLoad.js": ["zepto.js", "util/cookie.js"],
+                "com/locdist.js": ["zepto.js", "mjs.js"],
+                "com/magicCard.js": ["zepto.js", "common/msg.js"],
+                "com/nativeSearch.js": [],
+                "com/opendownload.js": [],
+                "com/pagecommon.js": ["count.js", "util/cookie.js", "util/i_extend.js", "mjs.js", "page/landingsession.js", "zepto.js"],
+                "com/phonecall.js": ["zepto.js", "common/msg.js"],
+                "com/radioarea.js": [],
+                "com/redirect.js": [],
+                "com/room_status.js": ["page/hotel/room_status.js"],
+                "com/selector.js": ["zepto.js", "util/act/drum.js"],
+                "com/share.js": ["zepto.js", "common/msg.js", "util/url.js"],
+                "com/smsBtn.js": ["zepto.js", "common/msg.js"],
+                "com/stepper.js": ["zepto.js"],
+                "com/sticky.js": ["zepto.js"],
+                "com/tab.js": ["zepto.js", "mjs.js", "util/url.js"],
+                "com/toggleClass.js": ["zepto.js"],
+                "com/unveil.js": ["zepto.js", "util/cookie.js"],
+                "com/verify_err_handle.js": ["zepto.js", "mjs.js"],
+                "com/weixin-share.js": ["zepto.js", "common/msg.js", "util/weixinAPI.js"],
+                "com/weixintip.js": [],
+                "common/banner.js": ["util/carousel.js"],
+                "common/checkPosi.js": ["util/cookie.js", "mjs.js", "util/geo.js"],
+                "common/countUp.js": [],
+                "common/datepicker.js": ["zepto.js", "mjs.js"],
+                "common/datepicker_hotel.js": ["zepto.js", "util/juicer.js"],
+                "common/dateselect.js": ["zepto.js", "common/msg.js", "common/iscroll-v5.1.3.js"],
+                "common/filter.js": ["zepto.js", "common/iscroll.js"],
+                "common/handleError.js": ["zepto.js", "mjs.js"],
+                "common/iframeResizer.js": [],
+                "common/iscroll-v5.1.3.js": [],
+                "common/iscroll.js": [],
+                "common/islide.js": [],
+                "common/log.js": ["zepto.js", "util/cookie.js"],
+                "common/msg.css.js": [],
+                "common/msg.js": ["zepto.js", "common/msg.css.js"],
+                "common/mtnb.js": [],
+                "common/pop_share.js": ["zepto.js", "amd_pop_v2.js"],
+                "common/risk_log_collector.js": ["zepto.js"],
+                "common/tips.js": ["zepto.js"],
+                "count.js": [],
+                "mjs.js": ["zepto.js", "util/cookie.js", "LocalStorage", "common/msg.js"],
+                "mobile_url_manager.js": [],
+                "page/account/address/edit.js": ["zepto.js", "mjs.js"],
+                "page/account/address/manageAddr.js": ["zepto.js", "mjs.js", "common/msg.js"],
+                "page/account/default.js": ["zepto.js", "mjs.js"],
+                "page/account/doyen/doyen_comments.js": ["zepto.js", "common/msg.js", "mjs.js", "page/event/oab.js", "common/pop_share.js"],
+                "page/account/doyen/feedbacklist.js": ["zepto.js"],
+                "page/account/login.js": ["zepto.js", "common/msg.js", "mjs.js", "common/tips.js", "common/risk_log_collector.js"],
+                "page/account/mescenter/default.js": ["zepto.js", "mjs.js", "common/msg.js", "util/act/gesture.js"],
+                "page/account/security2/policy.js": ["zepto.js", "mjs.js"],
+                "page/account/setpassword.js": ["zepto.js", "common/msg.js", "mjs.js"],
+                "page/buy/info.js": ["zepto.js", "common/msg.js", "LocalStorage", "mjs.js", "common/risk_log_collector.js"],
+                "page/buy2/info.js": ["zepto.js", "common/msg.js", "LocalStorage", "mjs.js", "common/risk_log_collector.js"],
+                "page/cinema/default.js": ["zepto.js", "common/iframeResizer.js", "common/msg.js"],
+                "page/city.js": ["zepto.js", "util/recentItem.js", "mjs.js", "util/geo.js"],
+                "page/deal/detail.js": ["zepto.js", "util/cookie.js", "util/i_extend.js", "common/msg.js", "mjs.js", "page/landingsession.js"],
+                "page/deal/feedbacklist.js": ["zepto.js", "common/msg.js", "util/url.js"],
+                "page/deal/hotel_booking.js": ["mjs.js", "common/tips.js", "zepto.js", "page/deal/list.js", "common/datepicker_hotel.js", "common/msg.js", "util/geo.js", "util/url.js"],
+                "page/deal/list.js": ["zepto.js", "util/url.js", "common/filter.js", "util/cookie.js", "util/geo.js", "common/banner.js", "common/msg.js", "mjs.js", "util/seo.js", "common/islide.js"],
+                "page/deal/search.js": ["util/recentItem.js", "mjs.js", "common/tips.js", "zepto.js", "util/i_extend.js", "page/deal/list.js", "LocalStorage", "util/act/pageable.js", "util/act/page.js", "util/cookie.js", "util/url.js"],
+                "page/elite/index.js": ["zepto.js", "common/msg.js", "mjs.js", "common/dateselect.js"],
+                "page/event/campus.js": ["zepto.js", "page/event/icard.js", "page/event/parallax.js"],
+                "page/event/card.js": ["page/event/util.js"],
+                "page/event/drag.js": ["page/event/util.js"],
+                "page/event/icard.js": ["page/event/card.js", "page/event/drag.js", "page/event/transition.js", "page/event/util.js"],
+                "page/event/jweixin-1.0.0.js": [],
+                "page/event/oab.js": ["zepto.js"],
+                "page/event/parallax.js": [],
+                "page/event/school.js": ["mjs.js", "common/tips.js", "zepto.js", "page/deal/list.js", "common/msg.js", "util/geo.js"],
+                "page/event/scratchs.js": ["zepto.js"],
+                "page/event/transition.js": ["page/event/util.js"],
+                "page/event/util.js": [],
+                "page/event/wechat.js": [],
+                "page/event/wexinapi.js": [],
+                "page/help/feedback.js": ["zepto.js", "common/msg.js"],
+                "page/hotel/bank.js": ["zepto.js"],
+                "page/hotel/indent.js": ["mjs.js", "zepto.js", "common/tips.js"],
+                "page/hotel/magiccard.js": ["zepto.js", "common/msg.js"],
+                "page/hotel/pay.js": ["mjs.js", "zepto.js", "common/tips.js", "common/msg.js"],
+                "page/hotel/poi_hotel.js": ["zepto.js", "util/i_extend.js", "common/datepicker_hotel.js"],
+                "page/hotel/room.js": ["mjs.js", "zepto.js", "common/tips.js", "common/msg.js"],
+                "page/hotel/room_status.js": ["zepto.js"],
+                "page/hotel/zldetail.js": ["zepto.js", "mjs.js", "common/msg.js"],
+                "page/hotel/zllist.js": ["zepto.js", "mjs.js", "common/tips.js", "common/msg.js"],
+                "page/index.js": ["common/checkPosi.js", "zepto.js", "util/cookie.js", "mjs.js", "util/geo.js", "common/banner.js", "util/act/pageable.js", "util/act/page.js", "util/i_extend.js", "page/landingsession.js"],
+                "page/ktv/booking.js": ["zepto.js", "common/msg.js", "common/iscroll.js"],
+                "page/ktv/buy.js": ["zepto.js", "mjs.js", "common/msg.js"],
+                "page/ktv/confirm.js": ["zepto.js", "common/msg.js", "LocalStorage", "mjs.js", "common/risk_log_collector.js"],
+                "page/ktv/list.js": ["zepto.js"],
+                "page/ktv/prefilter.js": ["zepto.js"],
+                "page/ktv/selectBank.js": ["zepto.js", "common/msg.js"],
+                "page/ktv/slide.js": ["zepto.js"],
+                "page/ktv/structure/confirmOrder.js": ["zepto.js", "common/msg.js", "mjs.js"],
+                "page/ktv/structure/grouping.js": ["zepto.js", "common/msg.js", "mjs.js"],
+                "page/landingsession.js": ["util/cookie.js", "util/i_extend.js", "mjs.js"],
+                "page/order/applyrefund.js": ["zepto.js", "common/msg.js", "mjs.js"],
+                "page/order/check.js": ["zepto.js", "common/msg.js"],
+                "page/order/orderList.js": ["zepto.js", "mjs.js", "common/tips.js", "common/msg.js"],
+                "page/order/selectBank.js": ["zepto.js", "common/msg.js"],
+                "page/poi/merchant.js": ["zepto.js", "mjs.js", "common/msg.js"],
+                "page/pointstore/record.js": ["zepto.js", "common/msg.js", "util/url.js"],
+                "page/rankList/detail.js": ["zepto.js", "common/log.js", "mjs.js"],
+                "page/rankList/index.js": ["zepto.js", "common/filter.js", "mjs.js", "common/msg.js", "util/cookie.js", "common/log.js"],
+                "page/recommend/index.js": ["zepto.js", "common/filter.js", "mjs.js", "common/msg.js", "util/cookie.js", "common/log.js"],
+                "page/recommend/listBZ.js": ["zepto.js", "common/filter.js", "mjs.js", "common/msg.js", "util/cookie.js", "common/log.js"],
+                "page/recommend/listCate.js": ["zepto.js", "common/filter.js", "mjs.js", "common/msg.js", "util/cookie.js", "common/log.js"],
+                "page/recommend/listPortlet.js": ["zepto.js", "common/filter.js", "mjs.js"],
+                "page/salon/feedbacklist.js": ["zepto.js", "common/msg.js", "util/url.js"],
+                "page/shopping_home/detail.js": ["zepto.js", "common/msg.js", "mjs.js", "common/islide.js"],
+                "page/shopping_home/index.js": ["zepto.js", "mjs.js", "util/act/pageable.js", "util/act/page.js"],
+                "page/shopping_home/list.js": ["zepto.js", "mjs.js", "util/act/pageable.js", "common/iscroll.js"],
+                "page/shopping_home/list_async.js": ["zepto.js", "mjs.js", "util/act/pageable.js", "common/iscroll.js"],
+                "page/shoppingmall/index.js": ["zepto.js", "util/url.js", "page/shoppingmall/smfilter.js", "util/cookie.js", "util/geo.js", "common/banner.js", "common/msg.js", "mjs.js", "util/seo.js", "common/islide.js"],
+                "page/shoppingmall/poilist.js": ["zepto.js", "util/url.js", "page/shoppingmall/smfilter.js", "util/cookie.js", "util/geo.js", "common/msg.js", "mjs.js", "util/seo.js", "common/islide.js"],
+                "page/shoppingmall/search.js": ["util/recentItem.js", "mjs.js", "common/tips.js", "zepto.js", "util/i_extend.js", "page/deal/list.js", "LocalStorage", "util/act/pageable.js", "util/act/page.js", "util/cookie.js", "util/url.js"],
+                "page/shoppingmall/smfilter.js": ["zepto.js", "common/iscroll.js"],
+                "page/topic/mingdian.css.js": [],
+                "page/topic/mingdian.js": ["zepto.js", "common/msg.js", "mjs.js", "page/topic/mingdian.css.js"],
+                "page/zhidequ/everAct.js": ["zepto.js", "mjs.js", "common/log.js"],
+                "page/zhidequ/index.js": ["zepto.js", "common/islide.js", "mjs.js", "common/msg.js", "common/log.js"],
+                "truck.js": [],
+                "util/act/drum.js": ["zepto.js"],
+                "util/act/gesture.js": ["zepto.js"],
+                "util/act/page.js": [],
+                "util/act/pageable.js": ["util/act/gesture.js", "util/act/page.js", "zepto.js"],
+                "util/act/starpage.js": [],
+                "util/bridge.js": ["zepto.js"],
+                "util/carousel.js": ["zepto.js"],
+                "util/cookie.js": [],
+                "util/form_validator.js": ["zepto.js"],
+                "util/geo.js": ["util/cookie.js", "common/msg.js"],
+                "util/i_extend.js": [],
+                "util/juicer.js": [],
+                "util/jweixin-1.0.0.js": [],
+                "util/loadImage.js": [],
+                "util/recentItem.js": ["LocalStorage"],
+                "util/seo.js": ["util/cookie.js", "common/msg.js"],
+                "util/spy.js": ["zepto.js"],
+                "util/url.js": [],
+                "util/weixinAPI.js": ["zepto.js", "mjs.js", "util/jweixin-1.0.0.js"],
+                "weixintips.js": [],
+                "zepto.js": []
+            }
+        }
+    }
+</script>
+<script src="__PUBLIC__/Ccwl/source/truck.js" async id="truckjsnode"></script>
+<script>
+    window.__setupCom = function (root) {
+        var root = root || document.body;
+        var doms = root.querySelectorAll("[data-com]");
+        try {
+            if (root.hasAttribute("data-com")) {
+                doms = Array.prototype.slice.call(doms);
+                doms.push(root)
+            }
+        } catch (e) {
+        }
+        if (doms.length) {
+            var collections = [];
+            var coms = [];
+            for (var i = 0; i < doms.length; i++) {
+                var comNames = doms[i].attributes["data-com"].value.split("|");
+                for (var j = 0; j < comNames.length; j++) {
+                    var comName = ("com/" + comNames[j] + ".js");
+                    doms[i].coms = doms[i].coms || [];
+                    if (doms[i].coms && doms[i].coms[comName]) {
+                        continue
+                    }
+                    doms[i].coms[comName] = "loading";
+                    var index = coms.indexOf(comName);
+                    if (index == -1) {
+                        index = coms.length;
+                        coms.push(comName)
+                    }
+                    collections.push({name: comName, dom: doms[i], index: index})
+                }
+            }
+            require(coms, function () {
+                for (var i = 0; i < collections.length; i++) {
+                    collections[i].dom.coms[collections[i].name] = new arguments[collections[i].index](collections[i].dom)
+                }
+            })
+        }
+
+
+        console.log('load');
+
+    };
+    if ("require" in window) {
+        __setupCom(document);
+
+    }
+    ;
+
+
+
+    function showform(){
+        $('.enroll').fadeIn();
+        $('.msg-btn-cancel').click(function(){
+            $('.enroll').fadeOut();
+
+        });
+
+    }
+</script>
+
+
+<div id="meituan_check"><br><br><br></div>
+
+
+
+
+</div>
+
+</div>
+<div style="display: none;" class="enroll">
+    <div class="msg-bg" style="left: 0px; height: 1365px;"></div>
+    <div id="msg" class="msg-doc msg-option">
+      <form action="{:U('Article/submit')}" method="post" id="enroll" name="enroll">
+          <div>
+            <dl class="list">
+                <dd>
+                    <dl>
+                        <dd class="kv-line-r dd-padding" data-com="smsBtn" data-requrl="/account/mobilelogincode">
+                            <input type="text" name="quickBuyName" id="login-name" class="input-weak kv-k" placeholder="请输入姓名">
+
+                        </dd>
+                        <dd class="kv-line-r dd-padding" data-com="smsBtn" data-requrl="/account/mobilelogincode">
+                            <input type="tel" name="quickBuyMobile" id="login-mobile" class="input-weak kv-k" placeholder="请输入手机号">
+
+                        </dd>
+                        <dd class="dd-padding">
+                            <input class="input-weak "  name="quickBuyCode"   id="quickBuyCode" type="text" nosave="true" pattern="[0-9]+" placeholder="请输入车牌号" >
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+          <input type="hidden" name="recruit_id" id="recruit_id"  value="{$info.id}"/>
+        <div class="msg-option-btns"><a class="btn msg-btn" gaevent="" onclick="formcheck()" href="javascript:;" style="background: #f90;color: #FFF; border-bottom: 1px solid #EC6208;">提交</a></div>
+          <button class="btn msg-btn-cancel" gaevent="" data-event="cancel" type="button">取消</button></div>
+    </form>
+</div>
+
+</body>
+<style>
+    .navbar {
+        height: 1.01rem;
+        color: #fff;
+        background: #0690C1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        position: relative;
+    }
+    .strong-color {
+        color: #0690C1;
+    }
+    .navbar .nav-dropdown{
+        background: #0690C1;
+    }
+    .nav-dropdown li{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    }
+</style>
+<script>
+    function formcheck(){
+        var mobile=$('#login-mobile').val();
+        var name  = $('#login-name').val();
+        var chepai  = $('#quickBuyCode').val();
+        var recruit_id= $("#recruit_id").val();
+        var patrn=/^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/; //验证手机号
+        var nameReg=/^[\u4E00-\u9FA5]{2,4}$/; //验证姓名汉字，2到4位
+        if(!nameReg.exec(name)){
+            alert('姓名格式不对');
+            $('#login-name').focus();
+            return false;
+        }
+        if(!patrn.exec(mobile)){
+            alert('手机号码格式不对');
+            $('#login-mobile').focus();
+            return false;
+        }
+        if(!chepai){
+            alert('请填写车牌');
+            $('#quickBuyCode').focus();
+            return false;
+        }
+        var url="{:U('Article/submit')}";
+        $.ajax({
+            url:url,
+            type:'post',
+            data:{quickBuyName:name,quickBuyMobile:mobile,quickBuyCode:chepai,recruit_id:recruit_id},
+            success:function(data){
+                console.log(data);
+                if(data.status=='ok'){
+                    $('.enroll').fadeOut();
+                    alert('报名成功！');
+                    var htmlstr='<dd class="detail-group">'+
+                            '<span class="left">'+name+'</span>'+
+                            '<span class="middle">'+mobile+'</span>'+
+                            '<span class="right">'+chepai+'</span>'+
+                            '</dd>';
+                    $('#erolled_list').append(htmlstr);
+                }
+            }
+        });
+
+//        $('#enroll').submit();
+    }
+</script>
+</html>

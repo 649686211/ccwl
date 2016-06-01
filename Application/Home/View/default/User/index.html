@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>重庆辰驰物流有限公司</title>
+    <meta name="meituan_check">
+    <meta name="description" content="重庆辰驰物流有限公司">
+    <meta name="keywords" content="重庆辰驰物流有限公司">
+    <meta name="location" content="province=重庆;city=重庆;coord=106.53063201904297,29.544605255126953">
+    <meta name="applicable-device" content="mobile">
+
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+
+    <script type="text/javascript" src="__PUBLIC__/static/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Ccwl/source/js/touchScroll.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Ccwl/source/js/touchslider.dev.js"></script>
+
+    <meta name="for" content="meituan.com">
+
+    <style>
+        @font-face {
+            font-family: 'cate_icon';
+            src: url(__PUBLIC__/Ccwl/source/fonts/cate4.woff?v4) format("woff"), url(__PUBLIC__/Ccwl/source/fonts/cate4.otf?v4);
+        }
+
+        @font-face {
+            font-family: 'base_icon';
+            src: url(__PUBLIC__/Ccwl/source/fonts/base14.woff) format("woff"), url(__PUBLIC__/Ccwl/source/fonts/base14.otf);
+        }
+    </style>
+    <link href="__PUBLIC__/Ccwl/source/eve.css" rel="stylesheet"  >
+    <link href="__PUBLIC__/Ccwl/source/index.css" rel="stylesheet"  >
+
+
+    <style>.msg-bg {
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998
+    }
+
+    .msg-doc {
+        position: fixed;
+        left: .3rem;
+        right: .3rem;
+        bottom: 45%;
+        border-radius: .06rem;
+        background: #fff;
+        overflow: hidden;
+        z-index: 999
+    }
+
+    .msg-hd {
+        background: #f0efed;
+        color: #333;
+        text-align: center;
+        padding: .28rem 0;
+        overflow: hidden;
+        font-size: .4rem;
+        border-bottom: 1px solid #DDD8CE
+    }
+
+    .msg-bd {
+        font-size: .34rem;
+        padding: .43rem;
+        border-bottom: 1px solid #D8D8D8
+    }
+
+    .msg-toast {
+        background: rgba(0, 0, 0, .8);
+        font-size: .4rem;
+        color: #fff;
+        border: 0;
+        text-align: center;
+        padding: .4rem;
+        -webkit-animation-name: pop-hide;
+        -webkit-animation-duration: 5s;
+        border-radius: .12rem;
+        bottom: 60%;
+        opacity: 0;
+        pointer-events: none
+    }
+
+    .msg-confirm, .msg-alert {
+        -webkit-animation-name: pop;
+        -webkit-animation-duration: .3s
+    }
+
+    .msg-option {
+        -webkit-animation-name: slideup;
+        -webkit-animation-duration: .3s
+    }
+
+    @-webkit-keyframes pop-hide {
+        0% {
+            -webkit-transform: scale(0.8);
+            opacity: 0
+        }
+        2% {
+            -webkit-transform: scale(1.1);
+            opacity: 1
+        }
+        6% {
+            -webkit-transform: scale(1)
+        }
+        90% {
+            -webkit-transform: scale(1);
+            opacity: 1
+        }
+        100% {
+            -webkit-transform: scale(0.9);
+            opacity: 0
+        }
+    }
+
+    @-webkit-keyframes pop {
+        0% {
+            -webkit-transform: scale(0.8);
+            opacity: 0
+        }
+        40% {
+            -webkit-transform: scale(1.1);
+            opacity: 1
+        }
+        100% {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @-webkit-keyframes slideup {
+        0% {
+            -webkit-transform: translateY(100%)
+        }
+        40% {
+            -webkit-transform: translateY(-10%)
+        }
+        100% {
+            -webkit-transform: translateY(0)
+        }
+    }
+
+    .msg-ft {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        font-size: .34rem
+    }
+
+    .msg-ft .msg-btn {
+        display: block;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        margin-right: -1px;
+        border-right: 1px solid #D8D8D8;
+        height: .88rem;
+        line-height: .88rem;
+        text-align: center;
+        color: #06c1ae
+    }
+
+    .msg-btn:last-child {
+        border-right: 0
+    }
+
+    .msg-option {
+        background: 0;
+        bottom: .5rem
+    }
+
+    .msg-option div:first-child, .msg-option .msg-option-btns:first-child .btn:first-child {
+        border-radius: .06rem .06rem 0 0;
+        border-top: 0
+    }
+
+    .msg-option .btn {
+        width: 100%;
+        background: #fff;
+        border: 0;
+        color: #06c1ae;
+        border-radius: 0
+    }
+
+    .msg-option .msg-bd {
+        background: #fff;
+        border-bottom: 0
+    }
+
+    .msg-option .btn {
+        height: .8rem;
+        line-height: .8rem;
+        border-top: 1px solid #ccc
+    }
+
+    .msg-option-btns .btn:last-child {
+        border-radius: 0 0 .06rem .06rem;
+        border-bottom: 1px solid #ccc
+    }
+
+    .msg-option .msg-btn-cancel {
+        padding: 0;
+        margin-top: .14rem;
+        color: #06c1ae;
+        border-radius: .06rem
+    }
+
+    .msg-dialog .msg-hd {
+        background-color: #fff
+    }
+
+    .msg-dialog .msg-bd {
+        background-color: #f0efed
+    }
+
+    .msg-slide {
+        background: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+        -webkit-animation-name: slideup;
+        -webkit-animation-duration: .3s
+    }</style>
+</head>
+<body class="automove" id="index" data-com="pagecommon" data-page-id="100001" data-iswebview="false">
+
+<header class="navbar">
+    <div class="nav-wrap-left">
+        <a class="react back" href="javascript:history.back()"><i class="text-icon icon-back"></i></a>
+    </div>
+    <span class="nav-header h1">我的订单</span>
+    <div class="nav-wrap-right">
+
+
+
+
+        <a class="react nav-dropdown-btn" data-com="dropdown" data-target="nav-dropdown">
+                                <span class="nav-btn">
+                                    <i class="text-icon">≋</i>导航
+                                </span>
+        </a>
+
+    </div>
+    <div id="nav-dropdown" class="nav-dropdown">
+        <ul>
+            <li><a class="react"   href="{:U('Index/index')}"><i class="text-icon">⟰</i>
+                <space></space>
+                首页</a></li>
+            <li><a class="react"   rel="nofollow" href="{:U('User/index')}"><i
+                    class="text-icon">⍥</i>
+                <space></space>
+                我的</a></li>
+            <!--<li><a class="react" gaevent="imt/deal/share" rel="nofollow" data-com="share" data-share-text="在美团发现一个不错的团购哦，您也来看看吧。仅售 17元! 沁园" data-share-pic="#"><i class="text-icon icon-share"></i>
+                <space></space>分享</a></li>
+-->
+        </ul>
+    </div>
+</header>
+
+<div id="tips"></div>
+
+
+<!--
+
+<dl class="list" >
+    <dd class="huodong-padding">
+
+
+
+
+
+
+        <div class="huodong-line flexbox">
+
+
+
+                <div class="huodong-container flex-1">
+                    <a class=" flexbox topic0" href="http://i.meituan.com/firework/tjxjjdzsljwxx?entry=htrb&amp;stid_ext=ht16" gaevent="imt/homepage/topic/16681">
+                            <span class="info flex-1">
+                                <strong>酒店折上减</strong>
+                                <small>折上立减无下限</small>
+                            </span>
+                        <span style="background: transparent none repeat scroll 0% 0%;" class="imgbox" data-com="unveil" data-src="http://p0.meituan.net/280.0/groupop/116e0c1119da6b9e0f9009c7897f9a4f34557.png"><img src="source/116e0c1119da6b9e0f9009c7897f9a4f34557.png" style="height: 100%;"></span>
+                    </a>
+                </div>
+
+
+                <div class="huodong-container flex-1">
+                    <a class=" flexbox topic1" href="http://i.meituan.com/topic/hot" gaevent="imt/homepage/topic/0">
+                            <span class="info flex-1">
+                                <strong>热门团购</strong>
+                                <small>大家都在买什么</small>
+                            </span>
+                        <span style="background: transparent none repeat scroll 0% 0%;" class="imgbox" data-com="unveil" data-src=" http://p1.meituan.net/mmc/a616a48152a895ddb34ca45bd97bbc9d13050.png"><img src="source/a616a48152a895ddb34ca45bd97bbc9d13050.png" style="height: 100%;"></span>
+                    </a>
+                </div>
+        </div>
+    </dd>
+</dl>
+-->
+
+<div id="guessLike" class="guess-like">
+    <dl style="opacity: 1;" class="list">
+        <dd>
+            <dl style="opacity: 1;" class="list" id="list_artcle">
+                <dt>我已经报名的货运订单</dt>
+
+                <foreach name="lists" item="vo">
+                    <dd>
+                        <a href="{:U('Article/detail',array('id'=>$vo['id']))}" gaevent="imt/homepage/guess" class="react ">
+                            <div class="dealcard" data-did="{$vo.id}">
+                                <if condition="$vo.recruitstatus eq 0"><span class="dealcard-nobooking"></span></if>
+                                <if condition="$vo.recruitstatus eq 1"><span class="dealcard-done"></span></if>
+                                <div style="background: transparent none repeat scroll 0% 0%;" class="dealcard-img imgbox"
+                                     data-com="unveil"><img src="{$vo.path}" style="width: 100%;"></div>
+                                <div class="dealcard-block-right">
+                                    <div class="dealcard-brand single-line">{$vo.title}</div>
+
+                                    <div class="title text-block">{$vo.description}</div>
+                                    <div class="price">
+                                        <if condition="$vo.price GT 0">
+                                            <span class="strong">{$vo.price}</span><span class="strong-color">元</span>
+                                            <else/>
+                                            <span class="strong">价格面议</span>
+                                        </if>
+	            <span class="line-right">
+	                    已报名{$vo.enrollcount}人
+	            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </dd>
+                </foreach>
+
+            </dl>
+        </dd>
+        <dd class="db">
+            <a class="react " href="javascript:;" data-stid_b="4" gaevent="imt/homepage/allcate">
+                <div class="more">查看更多信息</div>
+            </a>
+        </dd>
+    </dl>
+
+</div>
+
+
+<include file="Public/footer"/>
+<div style="display: none;" class="top-btn" data-com="gotop" gaevent="imt/ft/backtotop"><a class="react"><i
+        class="text-icon">⇧</i></a></div>
+
+<div id="meituan_check"><br><br><br></div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+                localStorage.pagenumber=2; //初始化页码
+                $('.more').click(function(){
+                    var page=localStorage.pagenumber;
+                    var url="index.php?s=/Home/Index/index/page/"+page+".html";
+                    $.ajax({
+                        url:url,
+                        type:'get',
+                        datatype:'json',
+                        success:function(res){
+                            console.log(res);
+                            localStorage.pagenumber=parseInt(page)+1;
+                            if(res.data!='no data'){
+                                var htmlstr='',statusclass='',price_str='';
+                                $.each(res.data,function(index,item){
+                                    statusclass=(item.recruitstatus==1)?'dealcard-done':'dealcard-nobooking';
+                                    price_str=(parseInt(item.price)==0)?'<span class="strong">价格面议</span>':'<span class="strong">'+item.price+'</span><span class="strong-color">元</span>';
+                                    htmlstr+='<dd>'+
+                                    '<a href="/index.php?s=/Home/Article/detail/id/'+item.id+'.html" gaevent="imt/homepage/guess" class="react ">'+
+                                    '<div class="dealcard" data-did="'+item.id+'">'+
+                                    '<span class="'+statusclass+'"></span>' +
+                                    '<div style="background: transparent none repeat scroll 0% 0%;" class="dealcard-img imgbox" data-com="unveil">' +
+                                    '<img src="'+item.path+'" style="width: 100%;"></div>'+
+                                    '<div class="dealcard-block-right">'+
+                                    '<div class="dealcard-brand single-line">'+item.title+'</div>'+
+                                    '<div class="title text-block">'+item.description+'</div>'+
+                                    '<div class="price">'+
+                                    price_str+
+                                    '<span class="line-right">'+
+                                    '已报名'+item.enrollcount+'人'+
+                                    '</span>'+
+                                    '</div>'+
+                                    '</div>'+
+                                    '</div>'+
+                                    '</a>'+
+                                    '</dd>';
+                                });
+
+                                $('#list_artcle').append(htmlstr);
+                            }else{
+                                alert('没有更多数据了！');
+                            }
+                        }
+                    });
+                });
+            }
+    );
+
+</script>
+
+
+</body>
+<style>
+    .navbar {
+        height: 1.01rem;
+        color: #fff;
+        background: #0690C1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        position: relative;
+    }
+    .strong-color {
+        color: #0690C1;
+    }
+    .navbar .nav-dropdown{
+        background: #0690C1;
+    }
+    .nav-dropdown li{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    }
+</style>
+</html>

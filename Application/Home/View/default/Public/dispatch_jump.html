@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>跳转提示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="location" content="province=重庆;city=重庆;coord=106.534073,29.576218">
+    <meta name="applicable-device" content="mobile">
+
+
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+</head>
+<style>
+    body, input, button {
+        font: 14px/1 "兰亭黑-简","Lantinghei SC","Microsoft YaHei","微软雅黑","sans-serif";
+        -webkit-font-smoothing: antialiased;
+        font-weight: bold;
+    }
+
+    .backBox{
+        margin-top: 154px;
+        text-align: center;
+    }
+    .backBox .icon {
+        display: inline-block;
+        width: 100px; height: 100px;
+        background: url("/Public/icon/backHome_bg.png") no-repeat;
+    }
+    .backBox .wrong{
+        background: url("/Public/icon/backHome_wrong.png") no-repeat;
+    }
+
+    .backinfo{
+        margin: 45px 0 20px 0;
+        font-size: 22px;
+        text-align: center;
+        color: #626464;
+    }
+
+    .backinfo .sec{
+        font-size: 18px;
+    }
+
+    .backurl a{
+        font-size: 14px;
+        color: #afb1b2;
+        text-decoration: none;
+    }
+
+    .backurl a:hover{
+        text-decoration: underline;
+        color: #939596;
+    }
+
+</style>
+<body>
+<script src="__PUBLIC__/js/jquery/jquery-1.7.2.min.js"></script>
+
+<div class="backBox">
+    <span class="icon <?php if($status){ echo('icon'); ?>
+            <?php }else{
+            echo('wrong');
+            }?>"></span>
+    <div class="backinfo">
+        <span class="meg"><?php if(isset($message)){ echo($message); ?>
+            <?php }else{
+            echo($error);
+            }?>
+        </span>
+        <span>，正在返回  <span class="sec" id="wait"><?php echo($waitSecond); ?></span>s ...</span>
+    </div>
+    <div class="backurl">
+        <a href="<?php echo($jumpUrl); ?>" id="href">如果页面长时间没有反应，请点击这里跳转</a>
+    </div>
+</div>
+<script type="text/javascript">
+    (function(){
+        var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+        var interval = setInterval(function(){
+            var time = --wait.innerHTML;
+            if(time <= 0) {
+                location.href = href;
+                clearInterval(interval);
+            };
+        }, 1000);
+    })();
+</script>
+</body>
+</html>
